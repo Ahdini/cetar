@@ -30,7 +30,9 @@
     - Processor: Intel(R) Core(TM) i5-2410M CPU @ 2.3GHz
     - Memory: 6,00 GB
     - Graphics Card: DirectX 12 dengan Intel(R) HD Graphics 3000 
-  * Tech Stack ini apa(?)
+  * Tech Stack
+    - Version Control dan Collaboration Platform : Github, Discord, Trello
+    - Teknologi : CSS, HTML, Javascript, dan PHP
 - Hasil dan pembahasan 
   * Use case diagram
     - ![RPL5-USE CASE DIAGRAM (1)](https://user-images.githubusercontent.com/78952649/121035799-6f5a8a00-c7d8-11eb-86c1-f4d40e3aca48.png)
@@ -42,6 +44,8 @@
     - ![RPL5-ERD (1)](https://user-images.githubusercontent.com/78952649/121036759-1dfeca80-c7d9-11eb-9fe3-04fb0d7dcf8c.png)
   * Arsitektur sistem 
   * Fungsi utama yang dikembangkan
+    - Dapat melakukan reservasi restoran dengan mudah
+    - Dapat melihat menu dari restoran
   * Fungsi CRUD
 - Hasil implementasi 
   * Screenshot sistem 
