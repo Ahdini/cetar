@@ -55,12 +55,12 @@
                 echo $_sesiData['status']['msg'];
                 unset($_sesiData['status']['msg']);
               }*/
-            ?>
+            ?> <br />
             <input type="text" class="username" name="inputEmail" placeholder="Email">
             <input type="text" class="username" name="inputNamaAwal" placeholder="Nama Awal">
             <input type="text" class="username" name="inputNamaAkhir" placeholder="Nama Akhir">
-            <input type="password" class="password" name="inputPassword1" placeholder="Kata Sandi">
-            <input type="password" class="password" name="inputPassword2" placeholder="Konfirmasi Kata Sandi"><br />
+            <input type="password" class="password" name="inputKataSandi" placeholder="Kata Sandi">
+            <input type="password" class="password" name="inputKonfirmasiKataSandi" placeholder="Konfirmasi Kata Sandi"><br />
             <input type="submit" value="Daftar" class="submit">
        </div>
    </form> 

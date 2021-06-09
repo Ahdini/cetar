@@ -53,14 +53,14 @@
     } */
 
     session_start();  
-    if(isset($_POST['inputEmail'])){
+    if(isset($_POST['Daftar'])){
 
         $email = filter_input(INPUT_POST, 'inputEmail', FILTER_VALIDATE_EMAIL);
         $nama_awal = filter_input(INPUT_POST, "inputNamaAwal", FILTER_SANITIZE_STRING);
         $nama_akhir = filter_input(INPUT_POST, "inputNamaAkhir", FILTER_SANITIZE_STRING);
 
-        $_Pass1 = password_hash($_POST["inputPassword"], PASSWORD_DEFAULT);
-        $_Pass2 = password_hash($_POST["inputPassword2"], PASSWORD_DEFAULT);
+        $kata_sandi = $_POST["inputKataSandi"];
+        $konfirmasi_kata_sandi = $_POST["inputKonfirmasiKataSandi"];
 
         if($email==""){
             $_SESSION["message"] = "Email harus diisi";
@@ -74,11 +74,11 @@
             $_SESSION["message"] = "Nama akhir harus diisi";
             header("location:regis.php");
             exit();
-        }else if($_Pass1==""){
+        }else if($kata_sandi==""){
             $_SESSION["message"] = "Kata sandi harus diisi";
             header("location:regis.php");
             exit();
-        }else if($_Pass1!=$_Pass2){
+        }else if($kata_sandi!=$konfirmasi_kata_sandi){
             $_SESSION["message"] = "Kata sandi tidak sama";
             header("location:regis.php");
             exit();
@@ -86,19 +86,28 @@
 
             //apakah email sudah digunakan?
             include("connect.php");
+            /*if(isset($_POST['Daftar'])){
+                mysqli_query($connect,"insert into pengguna set
+                email = '$_POST[inputEmail]',
+                nama_awal = '$_POST[inputNamaAwal]',
+                nama_akhir = '$_POST[inputNamaAkhir]',
+                kata_sandi = '$_POST[inputKataSandi]'
+                ");
+                header("location:after.php");
+                exit();*/
             $result = $connect->query("SELECT * FROM pengguna WHERE email LIKE '".$email."'");
 
             if($result->num_rows==0){
-                $sql = "INSERT INTO pengguna (email, nama_awal, nama_akhir, kata_sandi) 
-                VALUES ($email,$nama_awal,$nama_akhir,$_Pass1)";
-                $stmt = $connect->prepare($sql);
 
-                // eksekusi query untuk menyimpan ke database
-                $saved = $stmt->execute($params);
-
-                setcookie("userID",$result->fetch_assoc(["userID"]));
+                $connect->query("INSERT INTO pengguna VALUES (null,'".$email."',
+                '".$nama_awal."','".$nama_akhir."','".$kata_sandi."','pengguna')");
                 header("location:after.php");
                 exit();
+                
+
+                /*setcookie("userID",$result->fetch_assoc(["userID"]));
+                header("location:after.php");
+                exit();*/
             }else{
                 $_SESSION["message"] = "Email sudah digunakan";
                 header("location:regis.php");
