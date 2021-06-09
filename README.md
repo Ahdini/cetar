@@ -43,6 +43,30 @@
   * Entity relationship diagram
     - ![RPL5-ERD (1)](https://user-images.githubusercontent.com/78952649/121036759-1dfeca80-c7d9-11eb-9fe3-04fb0d7dcf8c.png)
   * Arsitektur sistem 
+    - Database
+      * Ringkasan: Untuk menyimpan dan mengelola data, kami memutuskan untuk menggunakan MySQL.
+      * Masalah: Data yang akan digunakan cukup banyak dan sering diperbarui secara terus menerus dikarenakan berupa website pemesanan tempat. Oleh karena itu, diperlukan penyimpanan atau storage yang dapat menampung semua data dengan terstruktur.
+      * Batasan: Fitur-fitur didalamnya tidak terlalu lengkap akan tetapi dirasa masih cukup untuk digunakan pada software yang akan dikembangkan. Selain itu juga memiliki kemudahan akses dan dalam mempelajarinya.
+      * Opsi: Terdapat beberapa aplikasi database yang sudah pernah digunakan seperti PostgreSQL dan MongoDB. Selain itu, ada juga MySQL yang sangat populer dan mudah ditemukan referensi penggunaannya. Akan tetapi, kami sebagai pemula lebih memperhitungkan banyaknya referensi terkait penggunaan aplikasi database ini. 
+      * Rasional: Kami memilih opsi MySQL dikarenakan aplikasi ini mendukung integrasi dengan banyak bahasa pemrograman. Tak hanya itu, penggunaan yang mudah dan terstruktur menjadi alasan lainnya.
+    - Bahasa pemrograman
+      * Ringkasan: Untuk membuat website “RASA” kami menggunakan bahasa pemrograman Javascript, dan PHP, SQL.
+      * Masalah: Untuk mengembangkan aplikasi, para pengembang harus menguasai bahasa pemrograman tertentu untuk memudahkan pengembangan. Dalam membuat website ini kami menggunakan bantuan beberapa framework untuk memudahkan dalam proses coding, oleh karena itu kami memilih menggunakan beberapa bahasa pemrograman untuk memudahkan pengembang.
+      * Batasan: Para pengembang harus mempelajari lebih dalam tentang beberapa bahasa pemrograman yang digunakan dalam mengembangkan website.
+      * Opsi: Javascript, dan PHP karena pengembang pernah mempelajari bahasa tersebut walaupun masih membutuhkan pembelajaran lebih mendalam.
+      * Rasional: Kombinasi dari Javascript dan PHP karena memungkinkan untuk diterapkan. 
+    - Framework
+      * Ringkasan: Untuk mengembangkan aplikasi berbasis website, Kami menggunakan framework Laravel, Vue.Js, dan Bootstrap. 
+      * Masalah: Seorang programmer seringkali menuliskan kode secara berulang-ulang. Kegiatan tersebut menyebabkan programmer menghabiskan banyak waktu dan tenaga untuk membuat kode baru dari awal sehingga kami membutuhkan framework.
+      * Batasan: Script kode yang dibuat berasal dari berbagai macam bahasa pemrograman, sehingga perlu mencari tahu bagaimana cara menggabungkan script.
+      * Opsi: Bootstrap menggunakan bahasa pemrograman CSS, sering digunakan para developer, tampilan yang dihasilkan memberikan kesan modern, dinamis, dan friendly khususnya di smartphone. Vue.js menggunakan bahasa pemrograman JavaScript, bersifat open source, proses integrasi lebih mudah. Laravel menggunakan bahasa pemrograman PHP, memiliki sintaks yang mudah dipahami dan digunakan, terintegrasi dengan library dan pihak ketiga, dapat dikembangkan menggunakan add-ons, dan dapat menjalankan task secara asynchronous.
+      * Rasional: Laravel, Vue.Js, dan Bootstrap karena menyesuaikan dengan bahasa pemrograman yang digunakan.
+     - Deploy website
+       * Ringkasan: Untuk mendeploy website, kami memilih untuk menggunakan Heroku.
+       * Masalah: Kode yang telah dibuat harus disatukan dengan server, penyimpanan database, dan aplikasi. Terdapat deploy website yang melakukan upload file terlebih dahulu pada file managernya sehingga tidak dapat dilakukan secara otomatis. Oleh karena itu, dibutuhkan deploy website yang dapat menyatukan secara langsung dengan cepat.
+       * Batasan: Penggunaan Heroku masih mengandalkan akun GitHub Student yang masih digratiskan dalam jangka waktu tertentu, sehingga fitur-fitur untuk deploy tidak sebagus versi profesional.
+       * Opsi: Terdapat banyak opsi untuk mendeploy software yang kami buat, seperti Heroku dan XAMPP. Dibandingkan dengan Heroku, aplikasi XAMPP lebih familiar penggunaannya dengan kami. Akan tetapi, aplikasi XAMPP hanya bisa digunakan pada server lokal sehingga mungkin kami hanya menggunakan saat uji coba software tidak untuk deploy.
+       * Rasional: Heroku karena dapat digunakan secara gratis. Selain itu, dapat di custom supaya bisa autodeploy antara github dengan heroku. Jadi, perubahan apapun yang masuk ke github, akan langsung mengubah juga di Herokunya.
   * Fungsi utama yang dikembangkan
     - Dapat melakukan reservasi restoran dengan mudah
     - Dapat melihat menu dari restoran
