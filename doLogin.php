@@ -4,11 +4,7 @@
         $email = $_POST["inputEmail"];
         $sandi = $_POST["inputPassword"];
 
-        if($email=="" and $sandi==""){
-            $_SESSION["message"] = "Belum diisi";
-            header("location:login.php");
-            exit();
-        }else if($email==""){
+        if($email==""){
             $_SESSION["message"] = "Email harus diisi";
             header("location:login.php");
             exit();
