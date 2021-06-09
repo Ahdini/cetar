@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_COOKIE["userID"])){
-      header("location:after.php");
+      header("location:after.html");
       exit();
     }
 ?>
