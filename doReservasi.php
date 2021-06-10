@@ -1,11 +1,11 @@
 <?php
     if(isset($_POST["inputTanggal"])){
+        $tgl_pesan = date("Y-m-d");
         $tanggal = $_POST["inputTanggal"];
         $waktu = $_POST["inputWaktu"];
         $jumlah = $_POST["inputJmlhMeja"];
         $nomor = $_POST["inputNoMeja"];
-        if(){
-            if($tanggal==""){
+        if($tanggal==""){
                 $_SESSION["message"] = "Tanggal harus diisi";
                 header("location:buat-reservasi.php");
                 exit();
