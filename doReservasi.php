@@ -23,6 +23,7 @@
                 exit();
         }else{
             include("connect_pesan.php");
+            
             $pesanan->query("INSERT INTO reservasi VALUES(null, $tanggal, $waktu,
             $jumlah,$nomor)");
             header("location:reservasi-saya.html");
