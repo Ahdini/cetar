@@ -1,11 +1,3 @@
-<?php
-  session_start();
-  if(isset($_COOKIE["userID"])){
-    header("location:after.php");
-    exit();
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,17 +23,11 @@
                 <li><a class="nav-link scrollto active" href="after.html">Beranda</a></li>
                   <li class="dropdown"><a href="#"><span>Reservasi</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                      <li><a href="buat-reservasi.php">Buat Reservasi</a></li>
-                      <li><a href="reservasi-saya.php">Reservasi Saya</a></li>
-                      <li><a href="riwayat-reservasi.php">Riwayat Reservasi</a></li>
+                      <li><a href="buat-reservasi.html">Buat Reservasi</a></li>
+                      <li><a href="reservasi-saya.html">Reservasi Saya</a></li>
+                      <li><a href="riwayat-reservasi.html">Riwayat Reservasi</a></li>
                     </ul>
                   </li>
-                  <?php
-                    if(isset($_COOKIE["userID"])){
-                        include("connect.php");
-                        $getUserLoggedIn = $connect->query("SELECT * FROM pengguna WHERE userID = '".$_COOKIE["userID"]."'")->fetch_assoc();
-                    }
-                  ?>
                   <li class="dropdown"><a href="#"><span>Ariana Grande</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                       <li><a href="profil.html">Profil Saya</a></li>

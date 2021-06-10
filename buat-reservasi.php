@@ -1,11 +1,3 @@
-<?php
-  session_start();
-  if(isset($_COOKIE["userID"])){
-    header("location:reservasi-saya.php");
-    exit();
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,22 +36,18 @@
             </ul>
         </div>
     </div>
+
+<!-- ======= Form reservasi ======= -->
     <div class="header">
         <h2>Buat Reservasi</h2>
     </div>
     <form action="doReservasi.php" method="post" class="box">
       <div class="login-area">
-      <br /><?php
-              if(isset($_SESSION["message"])){
-              echo $_SESSION["message"];
-              unset($_SESSION["message"]);
-              }
-              ?><br />
-          <input type="date" class="tanggal" name="inputTanggal" placeholder="Tanggal">
-          <input type="time" class="waktu" name="inputWaktu" placeholder="Waktu">
-          <input type="number" class="jmeja" name="inputJmlhMeja" placeholder="Jumlah Meja">
-          <input type="number" class="nmeja" name="inputNoMeja" placeholder="Nomor Meja">
-          <input type="submit" value="Pesan Sekarang" class="submit">
+          <input type="date" class="tanggal" name="Tgl_Acara" placeholder="Tanggal">
+          <input type="time" class="waktu" name="Jam_Acara" placeholder="Waktu">
+          <input type="number" class="jmeja" name="jumlah_meja" placeholder="Jumlah Meja">
+          <input type="number" class="nmeja" name="no_meja" placeholder="Nomor Meja">
+          <input type="submit" value="Pesan Sekarang" class="submit" name="submit">
       </div>
 
     </form> 

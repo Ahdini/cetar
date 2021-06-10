@@ -1,11 +1,3 @@
-<?php
-    session_start();
-    if(isset($_COOKIE["userID"])){
-      header("location:after.php");
-      exit();
-    }
-?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,22 +38,12 @@
            <p>Daftarkan ke akunmu</p>
        </div>
        <div class="login-area">
-            <?php
-              if(isset($_SESSION["message"])){
-              echo $_SESSION["message"];
-              unset($_SESSION["message"]);
-              }
-              /*if(isset($_sesiData['status']['msg'])){
-                echo $_sesiData['status']['msg'];
-                unset($_sesiData['status']['msg']);
-              }*/
-            ?> <br />
-            <input type="text" class="username" name="inputEmail" placeholder="Email">
-            <input type="text" class="username" name="inputNamaAwal" placeholder="Nama Awal">
-            <input type="text" class="username" name="inputNamaAkhir" placeholder="Nama Akhir">
-            <input type="password" class="password" name="inputKataSandi" placeholder="Kata Sandi">
-            <input type="password" class="password" name="inputKonfirmasiKataSandi" placeholder="Konfirmasi Kata Sandi"><br />
-            <input type="submit" value="Daftar" class="submit">
+            <input type="text" class="username" name="email" placeholder="Email">
+            <input type="text" class="username" name="nama_awal" placeholder="Nama Awal">
+            <input type="text" class="username" name="nama_akhir" placeholder="Nama Akhir">
+            <input type="password" class="password" name="kata_sandi" placeholder="Kata Sandi">
+            <input type="password" class="password" name="konfirmasi_kata_sandi" placeholder="Konfirmasi Kata Sandi">
+            <input type="submit" value="Daftar" class="submit" name="submit">
        </div>
    </form> 
 
