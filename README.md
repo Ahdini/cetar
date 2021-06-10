@@ -11,7 +11,7 @@
   * Ahdini Zahra (G24180060) sebagai Back End
   * Afiyah Hayatunisa (G24180071) sebagai UI/UX Designer
 - Deskripsi singkat aplikasi
-  * “RASA” adalah sebuah website yang dirancang untuk memudahkan pelanggan melakukan reservasi restoran x. Dengan “RASA” kita dapat melakukan reservasi restoran dengan cepat dan mudah tanpa uang muka di awal. Hanya dengan memasukan data pribadi pelanggan dan mengatur jam serta tanggal pada website tanpa harus ribet datang ke restoran. Akan terdapat fitur pengingat yang dikirimkan melalui email kepada pelanggan yang sudah melakukan reservasi. Sehingga pelanggan tidak lupa sudah memiliki jadwal untuk makan di restoran x. Reservasi ini akan otomatis dibatalkan jika pelanggan tidak datang dalam 30 menit (setelah jadwal yang sudah ditentukan).
+  * “RASA” adalah sebuah website yang dirancang untuk memudahkan pelanggan melakukan reservasi restoran x. Dengan “RASA” kita dapat melakukan reservasi restoran dengan cepat dan mudah tanpa uang muka di awal. Hanya dengan memasukan data pribadi pelanggan dan mengatur jam serta tanggal pada website tanpa harus ribet datang ke restoran.
 - User analysis 
   * User story
     - Sebagai pengguna yang belum terdaftar, agar dapat mengakses menu reservasi, saya dapat mendaftar terlebih dahulu dengan mengetikkan nama, alamat email, dan kata sandi
