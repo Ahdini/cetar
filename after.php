@@ -19,9 +19,9 @@
                 <li><a class="nav-link scrollto active" href="after.html">Beranda</a></li>
                   <li class="dropdown"><a href="#"><span>Reservasi</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                      <li><a href="buat-reservasi.html">Buat Reservasi</a></li>
-                      <li><a href="reservasi-saya.html">Reservasi Saya</a></li>
-                      <li><a href="riwayat-reservasi.html">Riwayat Reservasi</a></li>
+                      <li><a href="buat-reservasi.php">Buat Reservasi</a></li>
+                      <li><a href="reservasi-saya.php">Reservasi Saya</a></li>
+                      <li><a href="riwayat-reservasi.php">Riwayat Reservasi</a></li>
                     </ul>
                   </li>
                   <?php

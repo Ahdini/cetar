@@ -37,8 +37,13 @@
     <div class="header">
         <h2>Buat Reservasi</h2>
     </div>
-    <form action="reservasi-saya.html" method="post" class="box">
+    <form action="doReservasi.php" method="post" class="box">
       <div class="login-area">
+              <?php
+              if(isset($_SESSION["message"])){
+              echo $_SESSION["message"];
+              unset($_SESSION["message"]);
+              }
           <input type="date" class="tanggal" name="inputTanggal" placeholder="Tanggal">
           <input type="time" class="waktu" name="inputWaktu" placeholder="Waktu">
           <input type="number" class="jmeja" name="inpitJmlhMeja" placeholder="Jumlah Meja">
