@@ -76,7 +76,7 @@
     - Dapat melihat menu dari restoran
   * Fungsi CRUD
     - Create: Membuat akun, Membuat pesanan
-    - Read: Melihat Menu
+    - Read: Melihat Menu, Melihat Profil
     - Update: Mengubah Profil, Mengubah kata sandi
     - Delete: Menghapus pesanan
 - Hasil implementasi 
