@@ -101,8 +101,13 @@
 
                 $connect->query("INSERT INTO pengguna VALUES (null,'".$email."',
                 '".$nama_awal."','".$nama_akhir."','".$kata_sandi."','pengguna')");
-                header("location:after.php");
-                exit();
+                    if($result){
+                        header("location:after.php");
+                        exit();
+                    }else{
+                        echo'Gagal menyimpan Data';
+                    }
+                
                 
 
                 /*setcookie("userID",$result->fetch_assoc(["userID"]));

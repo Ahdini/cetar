@@ -24,11 +24,13 @@
                 exit();
         }else{
             include("connect_pesan.php");
-
-            $pesanan->query("INSERT INTO reservasi VALUES(null, $tanggal, $waktu,
-            $jumlah,$nomor)");
-            header("location:reservasi-saya.php");
-            exit();
+            $pesanan = mysqli_query($connect_pesan, "INSERT INTO reservasi VALUES (null, $tanggal, $waktu, $jumlah, $nomor)");
+            if($pesanan){
+                header("location:reservasi-saya.php");
+                exit();
+            }else{
+                echo'Gagal menyimpan Data';
+            }
         }
     }else{
         header("location:after.php");

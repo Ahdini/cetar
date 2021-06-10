@@ -39,7 +39,7 @@
     </div>
 
     <nav>
-		<a href="buat-reservasi.php">[+] Tambah Baru</a>
+		<a href="buat-reservasi.php">[+] Tambah Reservasi</a>
 	</nav>
     <br />
 	<table border="1">
@@ -69,7 +69,11 @@
 			echo "<td>".$pesan['jmlh_meja']."</td>";
 			echo "<td>".$pesan['no_meja']."</td>";
 
-			echo "</tr>";
+			echo "<td>";
+            echo "<a href='pembatalan.php".$pesan['id']."'>Batalkan</a>";
+            echo "</td>";
+
+            echo "</tr>";
 
 			}
 
