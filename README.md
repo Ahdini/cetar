@@ -83,7 +83,7 @@
   * Screenshot sistem 
   * Link aplikasi (jika sudah di deploy)
 - Testing (Test cases)
-  * ![testingu](https://user-images.githubusercontent.com/78952649/121610567-89b69100-ca80-11eb-860f-9eec76321450.png)
+  * ![testing](https://user-images.githubusercontent.com/78952649/121610687-c2566a80-ca80-11eb-8557-9fc124c0dd7f.jpeg)
 - Saran untuk pengembangan selanjutnya
   * Ide website lebih dimatangkan diawal
   * Manajemen waktu dalam pembuatan website lebih dioptimalkan
