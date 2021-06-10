@@ -1,5 +1,9 @@
 <?php
   session_start();
+  if(isset($_COOKIE["userID"])){
+    header("location:reservasi-saya.php");
+    exit();
+  }
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +48,7 @@
               echo $_SESSION["message"];
               unset($_SESSION["message"]);
               }
-              ?>
+              ?><br />
           <input type="date" class="tanggal" name="inputTanggal" placeholder="Tanggal">
           <input type="time" class="waktu" name="inputWaktu" placeholder="Waktu">
           <input type="number" class="jmeja" name="inpitJmlhMeja" placeholder="Jumlah Meja">
