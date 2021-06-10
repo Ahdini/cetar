@@ -1,39 +1,29 @@
 <?php
-    session_start();
-    if(isset($_POST["inputTanggal"])){
-        $tgl_pesan = date("D-m-y");
-        $tanggal = $_POST["inputTanggal"];
-        $waktu = $_POST["inputWaktu"];
-        $jumlah = $_POST["inputJmlhMeja"];
-        $nomor = $_POST["inputNoMeja"];
-        if($tanggal==""){
-                $_SESSION["message"] = "Tanggal harus diisi";
-                header("location:buat-reservasi.php");
-                exit();
-            }else if($waktu==""){
-                $_SESSION["message"] = "Waktu harus diisi";
-                header("location:buat-reservasi.php");
-                exit();
-            }else if($jumlah==""){
-                $_SESSION["message"] = "Jumlah meja harus diisi";
-                header("location:buat-reservasi.php");
-                exit();
-            }else if($nomor==""){
-                $_SESSION["message"] = "Nomor harus diisi";
-                header("location:buat-reservasi.php");
-                exit();
-        }else{
-            include("connect_pesan.php");
-            $pesanan = mysqli_query($connect_pesan, "INSERT INTO reservasi VALUES (null, $tanggal, $waktu, $jumlah, $nomor)");
-            if($pesanan){
-                header("location:reservasi-saya.php");
-                exit();
-            }else{
-                echo'Gagal menyimpan Data';
-            }
-        }
-    }else{
-        header("location:after.php");
-        exit();
-    }
+include("connect.php");
+// cek apakah tombol daftar sudah diklik atau blum?
+if(isset($_POST['submit'])){
+
+	// ambil data dari formulir
+	$tgl = $_POST['Tgl_Acara'];
+	$jam = $_POST['Jam_Acara'];
+	$jmeja = $_POST['jumlah_meja'];
+	$nmeja = $_POST['no_meja'];
+
+	// buat query
+	$connect = new mysqli ("localhost", "root", "", "restoran");
+  	$query = mysqli_query($connect, "INSERT INTO reservasi (Tgl_Acara, Jam_Acara, jumlah_meja, no_meja) VALUEs ('$tgl', '$jam', '$jmeja', '$nmeja')");
+
+	// apakah query simpan berhasil?
+	if( $query==TRUE ) {
+		// kalau berhasil alihkan ke halaman index.php dengan status=sukses
+		header('Location: after.php?status=sukses');
+	} else {
+		// kalau gagal alihkan ke halaman indek.ph dengan status=gagal
+		header('Location: after.php?status=gagal');
+	}
+
+
+} else {
+	die("Akses dilarang...");
+}
 ?>
