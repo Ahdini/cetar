@@ -45,6 +45,8 @@
   * Entity relationship diagram
     - ![RPL5-ERD (1)](https://user-images.githubusercontent.com/78952649/121036759-1dfeca80-c7d9-11eb-9fe3-04fb0d7dcf8c.png)
   * Arsitektur sistem 
+    - Arsitektur diagram
+      * ![RPL5-Activity Diagram (1)](https://user-images.githubusercontent.com/78952649/121536966-b7261f00-ca2d-11eb-80e1-ee8f1c474b73.png)
     - Database
       * Ringkasan: Untuk menyimpan dan mengelola data, kami memutuskan untuk menggunakan MySQL.
       * Masalah: Data yang akan digunakan cukup banyak dan sering diperbarui secara terus menerus dikarenakan berupa website pemesanan tempat. Oleh karena itu, diperlukan penyimpanan atau storage yang dapat menampung semua data dengan terstruktur.
