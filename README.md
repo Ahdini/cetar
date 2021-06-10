@@ -4,7 +4,7 @@
   * Paralel: 3
   * Kelompok: 5
   * Nama Asisten Praktikum:
-    - Qoriatul Khairunnisa (G64170014)
+    - Qorry Atul Chairunnisa (G64170014)
     - Indah Puspita (G64170035)
 - Nama anggota kelompok dan masing-masing role
   * Nurul Izzati Yulian (G24180021) sebagai Front End
@@ -83,9 +83,10 @@
   * Screenshot sistem 
   * Link aplikasi (jika sudah di deploy)
 - Testing (Test cases)
-  * Positive Cases
-  * Negative Cases (Optional, jika ada jadi nilai tambah)
+  * ![testing](https://user-images.githubusercontent.com/78952649/121610265-cdf56180-ca7f-11eb-9076-ae23ed9b10dd.jpeg)
 - Saran untuk pengembangan selanjutnya
+  * Ide website lebih dimatangkan diawal
+  * Manajemen waktu dalam pembuatan website lebih dioptimalkan
 
 ## Catatan
 - Laporan terakhir dikumpul sebelum presentasi projek pada pertemuan-14. Keterlambatan pengumpulan akan mengurangi nilai.
