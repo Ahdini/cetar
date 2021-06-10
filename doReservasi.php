@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_POST["inputTanggal"])){
-        $tgl_pesan = date("D-m-y");
+        $tgl_pesan = date("Y-m-d");
         $tanggal = $_POST["inputTanggal"];
         $waktu = $_POST["inputWaktu"];
         $jumlah = $_POST["inputJmlhMeja"];
@@ -24,13 +24,11 @@
                 exit();
         }else{
             include("connect_pesan.php");
-            $pesanan = mysqli_query($connect_pesan, "INSERT INTO reservasi VALUES (null, $tanggal, $waktu, $jumlah, $nomor)");
-            if($pesanan){
-                header("location:reservasi-saya.php");
-                exit();
-            }else{
-                echo'Gagal menyimpan Data';
-            }
+            $pesanan->query("INSERT INTO `reservasi` (`No_Pemesanan`, `tanggal`, `Tgl_Acara`, `Jam_Acara`, `jumlah_meja`, `no_meja`) 
+            VALUES ('', '$tgl_pesan', '$tanggal', '$waktu', '$jumlah', '$nomor')");
+            header("location:reservasi-saya.php");
+            exit();
+            
         }
     }else{
         header("location:after.php");

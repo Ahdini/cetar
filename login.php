@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_COOKIE["userID"])){
-      header("location:after.html");
+      header("location:after.php");
       exit();
     }
 ?>
@@ -29,19 +29,19 @@
                 <li><a class="nav-link scrollto active" href="beranda.html">Beranda</a></li>
                   <li class="dropdown"><a href="#"><span>Reservasi</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                      <li><a href="regis.php">Buat Reservasi</a></li>
-                      <li><a href="regis.php">Reservasi Saya</a></li>
-                      <li><a href="regis.php">Riwayat Reservasi</a></li>
-                    </ul>
+                      <li><a href="login.php">Buat Reservasi</a></li>
+                      <li><a href="login.php">Reservasi Saya</a></li>
+                      <li><a href="login.php">Riwayat Reservasi</a></li>
+                      </ul>
                   </li>
-                <a class="nav-link scrollto" href="login.html"><button>Masuk</button></a>
+                <a class="nav-link scrollto" href="login.php"><button>Masuk</button></a>
             </ul>
         </div>
     </div>
 
     <!-- ======= Form login ======= -->
     <form action="doLogin.php" method="post" class="box">
-       <div class="header">
+    <div class="header">
            <h4>Selamat datang di Rasa</h4>
            <p>Masuk ke akunmu</p>
        </div>
@@ -54,13 +54,10 @@
     ?>
            <input type="email" class="username" name="inputEmail" placeholder="Email">
            <input type="password" class="password" name="inputPassword" placeholder="Kata Sandi">
-           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="rememberMe">
-            <label class="form-check-label" for="rememberMe">Ingat Saya</label>   
-            </div>
+           
            <input type="submit" value="Masuk" class="submit">
 
-           <p>Belum punya akun? <a href="regis.html">Daftar disini</a></p>
+           <p>Belum punya akun? <a href="regis.php">Daftar disini</a></p>
        </div>
    </form> 
 

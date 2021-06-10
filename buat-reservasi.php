@@ -29,8 +29,14 @@
                       <li><a href="riwayat-reservasi.php">Riwayat Reservasi</a></li>
                     </ul>
                   </li>
+                  <?php
+                    if(isset($_COOKIE["userID"])){
+                        include("connect.php");
+                        $getUserLoggedIn = $connect->query("SELECT * FROM pengguna WHERE userID = '".$_COOKIE["userID"]."'")->fetch_assoc();
+                    }
+                  ?>                  
                   <li class="dropdown"><a href="#"><span>Ariana Grande</span> <i class="bi bi-chevron-down"></i></a>
-                    <ul>
+                  <ul>
                       <li><a href="profil.html">Profil Saya</a></li>
                       <li><a href="beranda.html">Keluar</a></li>
                     </ul>
