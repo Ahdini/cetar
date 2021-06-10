@@ -43,18 +43,19 @@
     </div>
     <form action="doReservasi.php" method="post" class="box">
       <div class="login-area">
-          <input type="date" class="tanggal" name="inputTanggal" placeholder="Tanggal">
-          <input type="time" class="waktu" name="inputWaktu" placeholder="Waktu">
-          <input type="number" class="jmeja" name="inpitJmlhMeja" placeholder="Jumlah Meja">
-          <input type="number" class="nmeja" name="inputNoMeja" placeholder="Nomor Meja">
-          <input type="submit" value="Pesan Sekarang" class="submit">
-      </div>
-      <?php
+      <br /><?php
               if(isset($_SESSION["message"])){
               echo $_SESSION["message"];
               unset($_SESSION["message"]);
               }
               ?><br />
+          <input type="date" class="tanggal" name="inputTanggal" placeholder="Tanggal">
+          <input type="time" class="waktu" name="inputWaktu" placeholder="Waktu">
+          <input type="number" class="jmeja" name="inputJmlhMeja" placeholder="Jumlah Meja">
+          <input type="number" class="nmeja" name="inputNoMeja" placeholder="Nomor Meja">
+          <input type="submit" value="Pesan Sekarang" class="submit">
+      </div>
+
     </form> 
 
 

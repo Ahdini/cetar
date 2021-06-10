@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if(isset($_POST["inputTanggal"])){
         $tgl_pesan = date("D-m-y");
         $tanggal = $_POST["inputTanggal"];
@@ -23,10 +24,10 @@
                 exit();
         }else{
             include("connect_pesan.php");
-            
+
             $pesanan->query("INSERT INTO reservasi VALUES(null, $tanggal, $waktu,
             $jumlah,$nomor)");
-            header("location:reservasi-saya.html");
+            header("location:reservasi-saya.php");
             exit();
         }
     }else{
