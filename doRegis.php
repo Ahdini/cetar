@@ -53,7 +53,7 @@
     } */
 
     session_start();  
-    if(isset($_POST['Daftar'])){
+    if(isset($_POST['inputEmail'])){
 
         $email = filter_input(INPUT_POST, 'inputEmail', FILTER_VALIDATE_EMAIL);
         $nama_awal = filter_input(INPUT_POST, "inputNamaAwal", FILTER_SANITIZE_STRING);

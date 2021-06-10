@@ -13,11 +13,11 @@
         <div class="navbar order-last order-lg-0">
             <h1 class="logo">RASA</h1>
             <ul>
-                <li><a class="nav-link scrollto active" href="after.html">Beranda</a></li>
+                <li><a class="nav-link scrollto active" href="after.php">Beranda</a></li>
                   <li class="dropdown"><a href="#"><span>Reservasi</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                      <li><a href="buat-reservasi.html">Buat Reservasi</a></li>
-                      <li><a href="reservasi-saya.html">Reservasi Saya</a></li>
+                      <li><a href="buat-reservasi.php">Buat Reservasi</a></li>
+                      <li><a href="reservasi-saya.php">Reservasi Saya</a></li>
                       <li><a href="riwayat-reservasi.html">Riwayat Reservasi</a></li>
                     </ul>
                   </li>
@@ -35,10 +35,10 @@
     </div>
     <form action="reservasi-saya.html" method="post" class="box">
       <div class="login-area">
-          <input type="date" class="tanggal" placeholder="Tanggal">
-          <input type="time" class="waktu" placeholder="Waktu">
-          <input type="number" class="jmeja" placeholder="Jumlah Meja">
-          <input type="number" class="nmeja" placeholder="Nomor Meja">
+          <input type="date" class="tanggal" name="inputTanggal" placeholder="Tanggal">
+          <input type="time" class="waktu" name="inputWaktu" placeholder="Waktu">
+          <input type="number" class="jmeja" name="inpitJmlhMeja" placeholder="Jumlah Meja">
+          <input type="number" class="nmeja" name="inputNoMeja" placeholder="Nomor Meja">
           <input type="submit" value="Pesan Sekarang" class="submit">
       </div>
     </form> 
