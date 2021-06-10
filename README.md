@@ -4,8 +4,8 @@
   * Paralel: 3
   * Kelompok: 5
   * Nama Asisten Praktikum:
-    - Indah Puspita (G64170035)
     - Qorry Atul Chairunnisa (G64170014)
+    - Indah Puspita (G64170035)
 - Nama anggota kelompok dan masing-masing role
   * Nurul Izzati Yulian (G24180021) sebagai Front End
   * Ahdini Zahra (G24180060) sebagai Back End
