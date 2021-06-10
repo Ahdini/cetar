@@ -73,6 +73,10 @@
     - Dapat melakukan reservasi restoran dengan mudah
     - Dapat melihat menu dari restoran
   * Fungsi CRUD
+    - Create: Membuat akun, Membuat pesanan
+    - Read: Melihat Menu
+    - Update: Mengubah Profil, Mengubah kata sandi
+    - Delete: Menghapus pesanan
 - Hasil implementasi 
   * Screenshot sistem 
   * Link aplikasi (jika sudah di deploy)
