@@ -26,7 +26,7 @@
                     <ul>
                       <li><a href="buat-reservasi.php">Buat Reservasi</a></li>
                       <li><a href="reservasi-saya.php">Reservasi Saya</a></li>
-                      <li><a href="riwayat-reservasi.html">Riwayat Reservasi</a></li>
+                      <li><a href="riwayat-reservasi.php">Riwayat Reservasi</a></li>
                     </ul>
                   </li>
                   <li class="dropdown"><a href="#"><span>Ariana Grande</span> <i class="bi bi-chevron-down"></i></a>
@@ -43,18 +43,18 @@
     </div>
     <form action="doReservasi.php" method="post" class="box">
       <div class="login-area">
-              <?php
-              if(isset($_SESSION["message"])){
-              echo $_SESSION["message"];
-              unset($_SESSION["message"]);
-              }
-              ?><br />
           <input type="date" class="tanggal" name="inputTanggal" placeholder="Tanggal">
           <input type="time" class="waktu" name="inputWaktu" placeholder="Waktu">
           <input type="number" class="jmeja" name="inpitJmlhMeja" placeholder="Jumlah Meja">
           <input type="number" class="nmeja" name="inputNoMeja" placeholder="Nomor Meja">
           <input type="submit" value="Pesan Sekarang" class="submit">
       </div>
+      <?php
+              if(isset($_SESSION["message"])){
+              echo $_SESSION["message"];
+              unset($_SESSION["message"]);
+              }
+              ?><br />
     </form> 
 
 

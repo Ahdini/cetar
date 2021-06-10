@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST["inputTanggal"])){
-        $tgl_pesan = date("Y-m-d");
+        $tgl_pesan = date("D-m-y");
         $tanggal = $_POST["inputTanggal"];
         $waktu = $_POST["inputWaktu"];
         $jumlah = $_POST["inputJmlhMeja"];
