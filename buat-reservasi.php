@@ -44,6 +44,7 @@
               echo $_SESSION["message"];
               unset($_SESSION["message"]);
               }
+              ?>
           <input type="date" class="tanggal" name="inputTanggal" placeholder="Tanggal">
           <input type="time" class="waktu" name="inputWaktu" placeholder="Waktu">
           <input type="number" class="jmeja" name="inpitJmlhMeja" placeholder="Jumlah Meja">
