@@ -1,14 +1,66 @@
 <?php
-    session_start();  
-    require_once("connect.php"));  
+/*    //memulai Session
+    session_start();
+    //memuat dan menginisialisasi class User
+    include 'connect.php';
+    $connect = new mysqli();
     if(isset($_POST['inputEmail'])){
+    //memeriksa apakah rincian user kosong
+        if(!empty($_POST['inputEmail']) && !empty($_POST['inputNamaAwal']) && 
+        !empty($_POST['inputNamaAkhir']) && !empty($_POST['inputPassword']) && 
+        !empty($_POST['inputPassword2'])){
+    //membandingkan password and konfirmasi password
+            if($_POST['Password'] !== $_POST['Password2']){
+                $sesiData['status']['type'] = 'error';
+                $sesiData['status']['msg'] = 'Kata sandi tidak sama'; 
+            }else{
+    //memeriksa apakah user sudah ada di dalam database
+                $kondSblmnya['where'] = array('email'=>$_POST['inputEmail']);
+                $kondSblmnya['return_type'] = 'count';
+                $userSblmnya = $connect->getRows($kondSblmnya);
+                if($userSblmnya > 0){
+                    $sesiData['status']['type'] = 'error';
+                    $sesiData['status']['msg'] = 'Email sudah ada, silakan gunakan email yang lain';
+                }else{
+        //memasukkan data user dalam database
+                    $userData = array(
+                        'email' => $_POST['inputEmail'],
+                        'nama_awal' => $_POST['inputNamaAwal'],
+                        'nama_akhir' => $_POST['inputNamaAkhir'],
+                        'kata_sandi' => md5($_POST['password'])
+                    );
+                    $insert = $connect->insert($userData);
+        //Status ditetapkan berdasarkan data yang dimasukkan
+                    if($insert){
+                        $sesiData['status']['type'] = 'sukses';
+                        $sesiData['status']['msg'] = 'Anda telah berhasil didaftarkan.';
+                        header('location:after.php');
+                        exit();
+                    }else{
+                        $sesiData['status']['type'] = 'error';
+                        $sesiData['status']['msg'] = 'Terjadi masalah, silahkan coba lagi.';
+                        header('location:regis.php');
+                        exit();
+                    }
+                }
+            }
+        }else{
+            $sesiData['status']['type'] = 'error';
+            $sesiData['status']['msg'] = 'Isi semua bidang.';
+            header('location:regis.php');
+            exit(); 
+        }
+    } */
+
+    session_start();  
+    if(isset($_POST['Daftar'])){
 
         $email = filter_input(INPUT_POST, 'inputEmail', FILTER_VALIDATE_EMAIL);
         $nama_awal = filter_input(INPUT_POST, "inputNamaAwal", FILTER_SANITIZE_STRING);
         $nama_akhir = filter_input(INPUT_POST, "inputNamaAkhir", FILTER_SANITIZE_STRING);
 
-        $sandi = password_hash($_POST["inputPassword1"], PASSWORD_DEFAULT);
-        $reSandi = $_POST["inputPassword2"];
+        $kata_sandi = $_POST["inputKataSandi"];
+        $konfirmasi_kata_sandi = $_POST["inputKonfirmasiKataSandi"];
 
         if($email==""){
             $_SESSION["message"] = "Email harus diisi";
@@ -22,11 +74,11 @@
             $_SESSION["message"] = "Nama akhir harus diisi";
             header("location:regis.php");
             exit();
-        }else if($sandi==""){
+        }else if($kata_sandi==""){
             $_SESSION["message"] = "Kata sandi harus diisi";
             header("location:regis.php");
             exit();
-        }else if($sandi!=$reSandi){
+        }else if($kata_sandi!=$konfirmasi_kata_sandi){
             $_SESSION["message"] = "Kata sandi tidak sama";
             header("location:regis.php");
             exit();
@@ -34,27 +86,28 @@
 
             //apakah email sudah digunakan?
             include("connect.php");
+            /*if(isset($_POST['Daftar'])){
+                mysqli_query($connect,"insert into pengguna set
+                email = '$_POST[inputEmail]',
+                nama_awal = '$_POST[inputNamaAwal]',
+                nama_akhir = '$_POST[inputNamaAkhir]',
+                kata_sandi = '$_POST[inputKataSandi]'
+                ");
+                header("location:after.php");
+                exit();*/
             $result = $connect->query("SELECT * FROM pengguna WHERE email LIKE '".$email."'");
 
             if($result->num_rows==0){
-                $sql = "INSERT INTO pengguna (userID, email, nama_awal, nama_akhir, kata_sandi) 
-                VALUES (null, :Email, :Nama Awal, :Nama Akhir, :Kata Sandi)";
-                $stmt = $connect->prepare($sql);
 
-                // bind parameter ke query
-                $params = array(
-                    ":Nama Awal" => $nama_awal,
-                    ":Nama Akhir" => $nama_akhir,
-                    ":Kata Sandi" => $sandi,
-                    ":Email" => $email
-                );
-
-                // eksekusi query untuk menyimpan ke database
-                $saved = $stmt->execute($params);
-
-                setcookie("userID",$result->fetch_assoc(["userID"]));
+                $connect->query("INSERT INTO pengguna VALUES (null,'".$email."',
+                '".$nama_awal."','".$nama_akhir."','".$kata_sandi."','pengguna')");
                 header("location:after.php");
                 exit();
+                
+
+                /*setcookie("userID",$result->fetch_assoc(["userID"]));
+                header("location:after.php");
+                exit();*/
             }else{
                 $_SESSION["message"] = "Email sudah digunakan";
                 header("location:regis.php");
@@ -66,5 +119,5 @@
     }else{
         header("location:beranda.html");
         exit();
-    }
+    } 
 ?>

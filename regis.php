@@ -41,7 +41,7 @@
 
     <!-- ======= Form regis ======= -->
     <form action="doRegis.php" method="post" class="box">
-       <div class="header">
+    <div class="header">
            <h4>Selamat datang di Rasa</h4>
            <p>Daftarkan ke akunmu</p>
        </div>
@@ -51,15 +51,18 @@
               echo $_SESSION["message"];
               unset($_SESSION["message"]);
               }
-            ?>
-            <h4>Email</h4> <input type="text" name="inputEmail" class="username">
-            <h4>Nama Awal</h4> <input type="text" name="inputNamaAwal" class="username">
-            <h4>Nama Akhir</h4> <input type="text" name="inputNamaAkhir" class="username">
-            <h4>Kata Sandi</h4> <input type="password" name="inputPassword1" class="password">
-            <h4>Konfirmasi Kata Sandi</h4> <input type="password" name="inputPassword2" class="password"><br />
+              /*if(isset($_sesiData['status']['msg'])){
+                echo $_sesiData['status']['msg'];
+                unset($_sesiData['status']['msg']);
+              }*/
+            ?> <br />
+            <input type="text" class="username" name="inputEmail" placeholder="Email">
+            <input type="text" class="username" name="inputNamaAwal" placeholder="Nama Awal">
+            <input type="text" class="username" name="inputNamaAkhir" placeholder="Nama Akhir">
+            <input type="password" class="password" name="inputKataSandi" placeholder="Kata Sandi">
+            <input type="password" class="password" name="inputKonfirmasiKataSandi" placeholder="Konfirmasi Kata Sandi"><br />
             <input type="submit" value="Daftar" class="submit">
        </div>
-       
    </form> 
 
 

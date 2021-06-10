@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_COOKIE["userID"])){
-      header("location:after.php");
+      header("location:after.html");
       exit();
     }
 ?>
@@ -29,16 +29,17 @@
                 <li><a class="nav-link scrollto active" href="beranda.html">Beranda</a></li>
                   <li class="dropdown"><a href="#"><span>Reservasi</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                      <li><a href="login.php">Buat Reservasi</a></li>
-                      <li><a href="login.php">Reservasi Saya</a></li>
-                      <li><a href="login.php">Riwayat Reservasi</a></li>
+                      <li><a href="regis.php">Buat Reservasi</a></li>
+                      <li><a href="regis.php">Reservasi Saya</a></li>
+                      <li><a href="regis.php">Riwayat Reservasi</a></li>
                     </ul>
                   </li>
-                <a class="nav-link scrollto" href="login.php"><button>Masuk</button></a>
+                <a class="nav-link scrollto" href="login.html"><button>Masuk</button></a>
             </ul>
         </div>
     </div>
 
+    <!-- ======= Form login ======= -->
     <form action="doLogin.php" method="post" class="box">
        <div class="header">
            <h4>Selamat datang di Rasa</h4>
@@ -51,9 +52,9 @@
         unset($_SESSION["message"]);
         }
     ?>
-           <h4>Email</h4> <input type="text" name="inputEmail" class="username">
-           <h4>Kata Sandi</h4> <input type="password" name="inputPassword" class="password">
-                      <div class="form-check">
+           <input type="email" class="username" name="inputEmail" placeholder="Email">
+           <input type="password" class="password" name="inputPassword" placeholder="Kata Sandi">
+           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="rememberMe">
             <label class="form-check-label" for="rememberMe">Ingat Saya</label>   
             </div>
@@ -61,8 +62,8 @@
 
            <p>Belum punya akun? <a href="regis.html">Daftar disini</a></p>
        </div>
-       
-    </form> 
+   </form> 
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
