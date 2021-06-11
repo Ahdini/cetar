@@ -88,6 +88,10 @@
   * Ide website lebih dimatangkan diawal
   * Manajemen waktu dalam pembuatan website lebih dioptimalkan
 - Link dokumentasi
+  [ipb.link/github-rasa](url)
+  [ipb.link/trello-rasa](url)
+  [ipb.link/figma-rasa](url)
+  [ipb.link/gsite-rasa](url)
 
 ## Catatan
 - Laporan terakhir dikumpul sebelum presentasi projek pada pertemuan-14. Keterlambatan pengumpulan akan mengurangi nilai.
