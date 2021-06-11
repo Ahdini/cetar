@@ -81,7 +81,6 @@
     - Delete: Menghapus pesanan
 - Hasil implementasi 
   * Screenshot sistem 
-  * Link aplikasi (jika sudah di deploy)
 - Testing (Test cases)
   * ![testing](https://user-images.githubusercontent.com/78952649/121611002-7c4dd680-ca81-11eb-8b28-8ff44a391a72.jpg)
 - Saran untuk pengembangan selanjutnya
