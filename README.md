@@ -110,13 +110,9 @@
   * Ide website lebih dimatangkan diawal
   * Manajemen waktu dalam pembuatan website lebih dioptimalkan
 - Link dokumentasi
-  [ipb.link/github-rasa](url)
-  [ipb.link/trello-rasa](url)
-  [ipb.link/figma-rasa](url)
-  [ipb.link/gsite-rasa](url)
-
-## Catatan
-- Laporan terakhir dikumpul sebelum presentasi projek pada pertemuan-14. Keterlambatan pengumpulan akan mengurangi nilai.
-- Silahkan mempersiapkan presentasi dengan sebaik mungkin, jadwal presentasi akan diumumkan 1 jam sebelum presentasi. 
-- Harap mempersiapkan slide, trello, github, dan demo aplikasi 5 menit sebelum jadwal presentasi Anda.
-- Waktu presentasi hanya 20 menit untuk masing-masing kelompok (tidak ada penambahan waktu bagi yang telat join ke google meet)
+  https://ipb.link/github-rasa
+  https://ipb.link/trello-rasa
+  https://ipb.link/figma-rasa
+  https://ipb.link/gsite-rasa
+- Link demo
+  https://ipb.link/demo-rasa
