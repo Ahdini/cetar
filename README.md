@@ -81,6 +81,29 @@
     - Delete: Menghapus pesanan
 - Hasil implementasi 
   * Screenshot sistem 
+    - Beranda 232-235
+      * ![Screenshot (232)](https://user-images.githubusercontent.com/78952649/121614909-f2563b80-ca89-11eb-8331-8ca71f0e14d1.png)
+      * ![Screenshot (233)](https://user-images.githubusercontent.com/78952649/121614957-05690b80-ca8a-11eb-8a9b-4243147420b3.png)
+      * ![Screenshot (234)](https://user-images.githubusercontent.com/78952649/121614993-16198180-ca8a-11eb-9bfe-643a8a100edf.png)
+      * ![Screenshot (235)](https://user-images.githubusercontent.com/78952649/121614983-11ed6400-ca8a-11eb-99be-79b38b771cd3.png)
+    - Login 237
+      * ![Screenshot (237)](https://user-images.githubusercontent.com/78952649/121615030-2598ca80-ca8a-11eb-8e16-42fe5ca9888f.png)
+    - Registrasi 238
+      * ![Screenshot (238)](https://user-images.githubusercontent.com/78952649/121615027-25003400-ca8a-11eb-8d49-e3578e08452e.png)
+    - Halaman setelah login 239
+      * ![Screenshot (239)](https://user-images.githubusercontent.com/78952649/121615024-24679d80-ca8a-11eb-8b72-fb850aecdf03.png)
+    - Buat reservasi 240
+      * ![Screenshot (240)](https://user-images.githubusercontent.com/78952649/121615022-23cf0700-ca8a-11eb-8a08-4f8516b8903f.png)
+    - Reservasi saya 241
+      * ![Screenshot (241)](https://user-images.githubusercontent.com/78952649/121615017-229dda00-ca8a-11eb-80a3-74d29ac28d7d.png)
+    - Riwayat 242
+      * ![Screenshot (242)](https://user-images.githubusercontent.com/78952649/121615014-22054380-ca8a-11eb-8823-98839505af23.png)
+    - Profil Saya 243
+      * ![Screenshot (243)](https://user-images.githubusercontent.com/78952649/121615013-22054380-ca8a-11eb-8a6d-98646b1e90b5.png)
+    - Ubah profil 244
+      * ![Screenshot (244)](https://user-images.githubusercontent.com/78952649/121615011-216cad00-ca8a-11eb-91b0-917dc705dfc2.png)
+    - Ubah kata sandi 245
+      * ![Screenshot (245)](https://user-images.githubusercontent.com/78952649/121615009-1fa2e980-ca8a-11eb-95be-d9a7a0408863.png)
 - Testing (Test cases)
   * ![testing](https://user-images.githubusercontent.com/78952649/121611002-7c4dd680-ca81-11eb-8b28-8ff44a391a72.jpg)
 - Saran untuk pengembangan selanjutnya
